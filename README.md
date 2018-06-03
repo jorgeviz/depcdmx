@@ -17,3 +17,12 @@ notebook to verify best deals.
 ## License
 
 [MIT License](./LICENSE)
+
+
+## TODO
+
+- Selenium for Lamudi
+- Segunda Mano Scraper
+- Trovit Scraper
+- Propiedades Scraper
+- Analysis Notebook
