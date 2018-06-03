@@ -29,7 +29,7 @@ def save(depts):
     # Read Existant file to append
     _fname = ddir+"{}/inmuebles24.csv".format(dt.date.today().isoformat())
     try:
-        df = pd.read_csv(_fname)
+        df = pd.read_csv(_fname, delimiter='~')
     except:
         print('New file, creating folder..')
         try:
@@ -43,11 +43,11 @@ def save(depts):
     print(depdf.head(1).to_dict())
     try:
         if df.empty:
-            depdf.to_csv(_fname)
+            depdf.set_index(['name','location']).to_csv(_fname, sep='~')
             print('Correctly saved file: {}'.format(_fname))
         else:
             df = pd.concat([df, depdf])
-            depdf.reset_index(drop=True).to_csv(_fname)
+            df.set_index(['name','location']).to_csv(_fname, sep='~')
             print('Correctly saved file: {}'.format(_fname))
     except Exception as e:
         print(e)
