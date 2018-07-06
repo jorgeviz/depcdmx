@@ -21,8 +21,8 @@ notebook to verify best deals.
 
 ## TODO
 
-- Selenium for Lamudi
+- JS for Lamudi
 - Segunda Mano Scraper
 - Trovit Scraper
 - Propiedades Scraper
-- Analysis Notebook
+- Analysis Notebook extended
